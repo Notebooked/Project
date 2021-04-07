@@ -89,13 +89,47 @@ nav {
 
 .small-nav {
   display:none;
+  float:right;
+  flex-direction:column;
+  justify-content:flex-start;
 }
 
 nav .small-nav .sn-icon {
   color:black;
   font-size:40px;
-  float:right;
   margin:5px 15px;
+  float:right;
+}
+
+.sndrop-content {
+  display:flex;
+  flex-direction:column;
+  display:block;
+  opacity:0;
+  transition: opacity 1s;
+}
+
+.sndrop-content a {
+  margin-left:auto;
+  color:black;
+  text-align:center;
+  text-decoration:none;
+  display:block;
+  background-color:rgba(255,255,255,0.7);
+  padding:14px 10px;
+  font-size:20px;
+  font-family: sans-serif;
+  transition: background-color 0.4s;
+}
+
+.sndrop-content a:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.sn-show {
+
+  opacity:1;
+  transition: opacity 1s;
 }
 
 @media only screen and (max-width: 800px) {
@@ -106,7 +140,7 @@ nav .small-nav .sn-icon {
     display:none;
   }
   .small-nav {
-    display:block;
+    display:flex;
   }
 }
 
@@ -120,12 +154,12 @@ nav .small-nav .sn-icon {
 #title .title {
   font-family: 'Lexend', sans-serif;
   margin:30px;
-  font-size:6vw;
+  font-size:70px;
 }
 
 #title .about {
   font-family:sans-serif;
-  font-size:3vw;
+  font-size:30px;
 }
 
 /*skills divs*/
@@ -135,42 +169,42 @@ nav .small-nav .sn-icon {
   flex-direction: column;
 }
 
-.skill .subtitle {
-  font-family: 'Montserrat', sans-serif;
-  font-size:3vw;
-}
-
-.skill-link {
-  border: solid 2px green;
-}
-
 .skills .skill {
   background-color: rgba(255,255,255,0.5);
-  width:35%;
   padding:5px 20px 10px 20px;
-  transition: width 1s;
+  width:325px;
+  max-width:375px;
+  transition: width 1s, max-width 1s;
   display:flex;
   text-decoration:none;
 }
 
 .skills .left-skill {
   float:left;
-  margin:20px;
+  margin:35px;
+  padding-left:25px;
 }
 
 .skills .skill:hover {
-  width:45%;
+  width:375px;
 }
 
 .skills .right-skill {
   margin:20px;
+  margin-right:30px;
   margin-left:auto;
+  padding-right:25px;
+}
+
+.skill .subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size:35px;
 }
 
 .skill .subtext {
   margin-top: 50px;
   font-family:sans-serif;
-  font-size:2vw;
+  font-size:20px;
 }
 
 .skills .skill .skill-arrow {
@@ -182,7 +216,8 @@ nav .small-nav .sn-icon {
 }
 
 .skill-arrow span {
-  font-size:40px;
+  font-size:60px;
+  color: #42437f;
 }
 
 .left-skill .skill-arrow {
